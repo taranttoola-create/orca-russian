@@ -1,0 +1,14 @@
+{
+  "manifestVersion": 1,
+  "id": "orca-russian",
+  "publisher": "taranttoola-create",
+  "name": "Русский язык для Orca",
+  "version": "1.1.0",
+  "description": "Локализация интерфейса Orca на русский язык.",
+  "engines": { "orca": ">=1.4.0" },
+  "pluginApi": 1,
+  "contributes": {
+    "languagePacks": [{ "locale": "ru", "path": "locales/ru.json" }]
+  },
+  "capabilities": []
+}
