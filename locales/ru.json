@@ -8742,7 +8742,8 @@
       "d2c6a0e8f1": "grok",
       "c1b5f9d7e0": "xai",
       "b0a4e8c6d9": "oauth",
-      "a9f3d7b5c8": "вход"
+      "a9f3d7b5c8": "вход",
+      "d16378a88f": "MiniMax"
      }
     },
     "advanced": {
@@ -8821,7 +8822,16 @@
       "agentPermissions": "Разрешения агента",
       "agentPermissionsDescription": "Переключайте права доступа агентов по умолчанию между Yolo и Manual.",
       "agentRuntime": "Среда выполнения агентов",
-      "agentRuntimeDescription": "Выберите, где агенты обнаруживаются и запускаются по умолчанию: на Windows или в WSL."
+      "agentRuntimeDescription": "Выберите, где агенты обнаруживаются и запускаются по умолчанию: на Windows или в WSL.",
+      "runtime": "среда выполнения",
+      "agentLocation": "расположение агента",
+      "installedAgentsWsl": "установленные агенты в WSL",
+      "permission": "разрешение",
+      "permissions": "разрешения",
+      "yolo": "yolo",
+      "manual": "вручную",
+      "skip": "пропуск",
+      "checks": "проверки"
      }
     },
     "appearance": {
@@ -8944,7 +8954,11 @@
       },
       "leftSidebarAppearance": {
        "title": "Вид левой боковой панели",
-       "description": "Левая боковая панель может повторять терминал, оставаться стандартной или использовать оттенок."
+       "description": "Левая боковая панель может повторять терминал, оставаться стандартной или использовать оттенок.",
+       "project": "проект",
+       "terminal": "терминал",
+       "background": "фон",
+       "tint": "оттенок"
       },
       "workspaceCardLayout": {
        "title": "Макет карточек рабочих областей",
@@ -8959,7 +8973,15 @@
       },
       "showPinnedWorktreesInGroups": {
        "title": "Также показывать закреплённые worktree в исходных списках",
-       "description": "Закреплённые worktree остаются в разделе «Закреплённые» и также появляются в разделах «Все», «Проект», «Статус» и «PR»."
+       "description": "Закреплённые worktree остаются в разделе «Закреплённые» и также появляются в разделах «Все», «Проект», «Статус» и «PR».",
+       "pinned": "закреплённые",
+       "worktree": "worktree",
+       "workspace": "рабочая область",
+       "all": "все",
+       "project": "проект",
+       "status": "статус",
+       "pr": "PR",
+       "duplicate": "дубликат"
       },
       "antigravityUsageTitle": "Использование Antigravity",
       "antigravityUsageDescription": "Показывать использование подписки Antigravity в строке состояния.",
@@ -8969,7 +8991,15 @@
       "d6c0a9e2f4": "grok",
       "c5b9f8d1e3": "xai",
       "usagePercentageDisplayTitle": "Проценты использования",
-      "usagePercentageDisplayDescription": "Выберите, показывать ли в лимитах провайдера процент использованного или оставшегося."
+      "usagePercentageDisplayDescription": "Выберите, показывать ли в лимитах провайдера процент использованного или оставшегося.",
+      "tray": {
+       "tray": "трей",
+       "system": "системный трей",
+       "minimize": "свернуть",
+       "close": "закрыть",
+       "notification": "область уведомлений",
+       "background": "фон"
+      }
      }
     },
     "auto": {
@@ -9063,7 +9093,26 @@
       "a942905148": "URL, открываемый при создании новой вкладки браузера. Оставьте пустым, чтобы открывать пустую вкладку.",
       "c3903322d2": "Домашняя страница по умолчанию",
       "19ea5607cf": "Метки localhost для worktree",
-      "4e0fdf0a3f": "Открывать порты рабочей области как URL localhost Orca, привязанные к worktree, чтобы вкладки браузера было легче различать."
+      "4e0fdf0a3f": "Открывать порты рабочей области как URL localhost Orca, привязанные к worktree, чтобы вкладки браузера было легче различать.",
+      "6f5199381e": "порты",
+      "8f036ea11f": "worktree",
+      "c4e3bf3282": "вкладки",
+      "a8c55c9c91": "фавиконка",
+      "660c1dd007": "метки",
+      "clientHostedRemote": {
+       "remote": "удалённый",
+       "client": "клиент",
+       "host": "хост",
+       "desktop": "рабочий стол",
+       "placement": "размещение"
+      },
+      "sshWorkspaceRouting": {
+       "ssh": "SSH",
+       "proxy": "прокси",
+       "tunnel": "туннель",
+       "routing": "маршрутизация",
+       "network": "сеть"
+      }
      },
      "use": {
       "search": {
@@ -9270,11 +9319,26 @@
       "nativeChat": {
        "title": "Chat UI",
        "description": "Предпросмотр десктоп-чата для поддерживаемых терминальных сессий агентов.",
-       "grok": "grok"
+       "grok": "grok",
+       "native": "встроенный",
+       "chat": "чат",
+       "claude": "Claude",
+       "codex": "Codex",
+       "openclaude": "OpenClaude",
+       "omp": "OMP",
+       "terminal": "терминал",
+       "agent": "агент"
       },
       "agentDashboard": {
        "title": "Панель агентов",
-       "description": "Канбан-доска для мониторинга агентов в worktree — в окне или в отдельном окне."
+       "description": "Канбан-доска для мониторинга агентов в worktree — в окне или в отдельном окне.",
+       "agent": "агент",
+       "dashboard": "дашборд",
+       "kanban": "канбан",
+       "popout": "отдельное окно",
+       "board": "доска",
+       "inWindow": "в окне",
+       "worktrees": "worktree"
       }
      }
     },
@@ -9446,7 +9510,24 @@
       "editorFontFamily": "Шрифт редактора",
       "editorFontFamilyDesc": "Шрифт редакторов файлов и панелей диффа. Оставьте пустым, чтобы использовать шрифт терминала.",
       "externalWorktrees": "Внешние worktree",
-      "externalWorktreesDescription": "Выберите, показывать ли по умолчанию worktree, созданные вне Orca."
+      "externalWorktreesDescription": "Выберите, показывать ли по умолчанию worktree, созданные вне Orca.",
+      "editorFontKw": "шрифт",
+      "f96cdaf37d": "проверка орфографии",
+      "a51d23f4a1": "проверка орфографии",
+      "641358460a": "орфография",
+      "d755962089": "красное подчёркивание",
+      "projectRuntime": "среда выполнения проекта",
+      "runtime": "среда выполнения",
+      "windowsHost": "хост Windows",
+      "wsl": "WSL",
+      "distro": "дистрибутив",
+      "execution": "выполнение",
+      "externalKeyword": "внешний",
+      "visibility": "видимость",
+      "sidebar": "боковая панель",
+      "867dddea41": "закреплённые",
+      "5250cf0e48": "закрепить",
+      "afa37a34e1": "закрыть"
      }
     },
     "git": {
@@ -9500,7 +9581,8 @@
       "upstream": "upstream",
       "localChanges": "локальные изменения",
       "originMaster": "origin/master",
-      "committedChanges": "закоммиченные изменения"
+      "committedChanges": "закоммиченные изменения",
+      "diffBase": "база диффа"
      }
     },
     "input": {
@@ -9695,7 +9777,13 @@
        "1de96ec8a6": "Показывать кнопку Orca Mobile",
        "682293cadf": "Показывать кнопку Orca Mobile вверху левой боковой панели.",
        "e4f4daea0e": "relay",
-       "5d5af8e041": "iphone"
+       "5d5af8e041": "iphone",
+       "74618577c7": "мобильный",
+       "5e5b8878bf": "телефон",
+       "5bff6a2ef0": "боковая панель",
+       "6cf5f54ce1": "кнопка",
+       "648eeada79": "скрыть",
+       "ac79fe4a04": "показать"
       }
      }
     },
@@ -9938,7 +10026,25 @@
       "projectRuntime": "Среда выполнения проекта",
       "projectRuntimeDescription": "Выберите, где работает этот проект: на Windows или в WSL.",
       "externalWorktrees": "Внешние worktree",
-      "externalWorktreesDescription": "Переопределяет, отображаются ли для этого проекта worktree, созданные вне Orca."
+      "externalWorktreesDescription": "Переопределяет, отображаются ли для этого проекта worktree, созданные вне Orca.",
+      "waitForSetupBeforeAgent": "ждать настройки перед запуском агента",
+      "external": "внешний",
+      "visibility": "видимость",
+      "sidebar": "боковая панель",
+      "fork": "форк",
+      "upstream": "upstream",
+      "syncFork": "синхронизация форка",
+      "fastForward": "fast-forward",
+      "behindUpstream": "позади upstream",
+      "origin": "origin",
+      "defaultBranch": "ветка по умолчанию",
+      "runtime": "среда выполнения",
+      "execution": "выполнение",
+      "windowsHost": "хост Windows",
+      "wsl": "WSL",
+      "distro": "дистрибутив",
+      "agentRuntime": "среда выполнения агента",
+      "skillRuntime": "среда выполнения навыка"
      }
     },
     "runtime": {
@@ -10047,7 +10153,9 @@
        "c38c18be15": "выделение",
        "797fdfe4ca": "выделение",
        "603818e8d8": "Автоматически копирует выделения в терминале в буфер обмена сразу после выделения.",
-       "3bdc84f059": "Копирование при выделении"
+       "3bdc84f059": "Копирование при выделении",
+       "zellij": "zellij",
+       "grok": "grok"
       }
      },
      "search": {
@@ -10241,7 +10349,22 @@
        "title": "Режим темы",
        "keyword_target": "цель",
        "keyword_editing": "редактирование"
-      }
+      },
+      "39ea7c0d28": "терминал",
+      "scroll": "прокрутка",
+      "scrolling": "прокрутка",
+      "speed": "скорость",
+      "wheel": "колесо мыши",
+      "trackpad": "трекпад",
+      "tui": "TUI",
+      "a0c44061ee": "подтверждение",
+      "close_terminal": "закрыть",
+      "running": "работающие",
+      "command": "команда",
+      "agent": "агент",
+      "process": "процесс",
+      "prompt": "запрос",
+      "stop": "остановить"
      },
      "windows": {
       "search": {
@@ -10721,7 +10844,12 @@
     "ephemeralVms": {
      "search": {
       "description": "Узнайте, как рецепты из репозитория дают каждой рабочей области собственное одноразовое окружение по требованию.",
-      "cloudVmTitle": "Облачная VM"
+      "cloudVmTitle": "Облачная VM",
+      "keywordVm": "VM",
+      "keywordSandbox": "песочница",
+      "keywordCloud": "облако",
+      "keywordRecipe": "рецепт",
+      "keywordEphemeral": "эфемерный"
      }
     },
     "EphemeralVmsPane": {
@@ -10779,7 +10907,12 @@
        },
        "search": {
         "title": "Linear",
-        "description": "Статус навыка Linear, примеры использования и ссылки на настройку «Источников задач»."
+        "description": "Статус навыка Linear, примеры использования и ссылки на настройку «Источников задач».",
+        "linear": "Linear",
+        "tickets": "тикеты",
+        "issues": "задачи",
+        "skill": "навык",
+        "orcaLinear": "orca-linear"
        }
       }
      }
@@ -11172,7 +11305,15 @@
      "allowPublishingWebDescription": "Только десктоп. Откройте Настройки → Artifacts на устройстве-хосте, чтобы изменить этот параметр.",
      "allowPublishingDescription": "Публикуйте файлы HTML и Markdown как ссылки, которые может открыть любой, у кого есть URL. Существующие ссылки остаются, пока вы не удалите их в Artifacts.",
      "howToDescriptionDisabled": "Включите публикацию артефактов выше, чтобы публиковать файлы HTML или Markdown как публичные ссылки.",
-     "allowPublishingSearchDescription": "Разрешить Orca публиковать файлы HTML и Markdown как публичные ссылки."
+     "allowPublishingSearchDescription": "Разрешить Orca публиковать файлы HTML и Markdown как публичные ссылки.",
+     "keywordArtifacts": "артефакты",
+     "keywordShare": "поделиться",
+     "keywordPublish": "публикация",
+     "keywordPublic": "публичный",
+     "keywordPermission": "разрешение",
+     "keywordHtml": "HTML",
+     "keywordMarkdown": "Markdown",
+     "keywordUpload": "загрузка"
     },
     "orcaAccount": {
      "connected": "Подключено",
@@ -11194,7 +11335,14 @@
      "relayTitle": "Orca Relay",
      "relayDescription": "Подключайте Orca Mobile к этому десктопу через сотовую сеть или любой Wi-Fi.",
      "skillsTitle": "Обмен скиллами",
-     "skillsDescription": "Делитесь одним скиллом или целым набором по непубличной ссылке и устанавливайте их на любой своей машине."
+     "skillsDescription": "Делитесь одним скиллом или целым набором по непубличной ссылке и устанавливайте их на любой своей машине.",
+     "keywordAccount": "аккаунт",
+     "keywordLogin": "вход",
+     "keywordLogout": "выход",
+     "keywordSignIn": "войти",
+     "keywordSignOut": "выйти",
+     "keywordRelay": "релей",
+     "keywordCloud": "облако"
     },
     "automations": {
      "showButton": "Показывать кнопку «Автоматизации»",

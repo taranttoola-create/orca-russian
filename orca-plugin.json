@@ -3,10 +3,10 @@
   "id": "orca-russian",
   "publisher": "taranttoola-create",
   "name": "Русский язык для Orca",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Локализация интерфейса Orca на русский язык.",
   "engines": {
-    "orca": ">=1.4.0"
+    "orca": ">=1.4.169"
   },
   "pluginApi": 1,
   "contributes": {
