@@ -1,9 +1,9 @@
 {
   "manifestVersion": 1,
-  "id": "orca-russian",
+  "id": "russian",
   "publisher": "taranttoola-create",
   "name": "Русский язык для Orca",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "description": "Локализация интерфейса Orca на русский язык.",
   "engines": {
     "orca": ">=1.4.169"
