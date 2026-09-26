@@ -6261,7 +6261,7 @@
           "parkTerminal": "Припарковать терминал"
         },
         "SidebarFeedbackImageAttachments": {
-          "screenshotsHint": "Прикрепить до {count} снимков экрана",
+          "screenshotsHint": "Прикрепить до {{count}} снимков экрана, суммарно {{maxSize}}",
           "attachImages": "Прикрепить",
           "removeImage": "Убрать {{fileName}}"
         },
@@ -17396,7 +17396,7 @@
         "reason": "Причина"
       },
       "launchPromptNotDelivered": "Не доставлено — проверьте терминал",
-      "structuredSessionLaunchFailed": "Не удалось открыть чат Codex",
+      "structuredSessionLaunchFailed": "Не удалось открыть чат {{value0}}",
       "ask": {
         "asked": "Спрошено:",
         "awaiting": "Ожидание ввода пользователя:",
