@@ -3773,7 +3773,8 @@
             "floatingTerminalNewActivity": "{{label}}, новая активность",
             "codexSignInSuccess": "Выполнен вход в Codex",
             "codexSignInError": "Не удалось войти в Codex. Попробуйте ещё раз.",
-            "cursorUsageMenu": "Использование Cursor"
+            "cursorUsageMenu": "Использование Cursor",
+            "hiddenUsageProviders": "Также: {{value0}}"
           },
           "StatusBarUsageEmptyCta": {
             "828c764a79": "Подключить аккаунт",
@@ -15374,7 +15375,8 @@
           "a0af0198aa": "Большие диффы не отображаются по умолчанию.",
           "f7fa7a40d0": "Загрузить дифф",
           "c3d9f4a712": "Размер этого диффа пока неизвестен, поэтому он загружается по запросу."
-        }
+        },
+        "diffCommentSaveFailed": "Не удалось сохранить комментарий"
       },
       "diff": {
         "comments": {
@@ -15391,7 +15393,10 @@
             "2b3ce6d394": "Отмена",
             "e05063cfc1": "Строка {{value0}}",
             "c845170b3b": "Строки {{value0}}-{{value1}}",
-            "commentTooLarge": "Комментарий слишком велик для безопасной отправки."
+            "commentTooLarge": "Комментарий слишком велик для безопасной отправки.",
+            "5e9b3d0c2e": "Добавление…",
+            "5fa4bfebaa": "Добавить заметку",
+            "f6c449191e": "Добавить заметку для ИИ"
           },
           "useDiffCommentDecorator": {
             "995fa28b50": "Эта заметка"
