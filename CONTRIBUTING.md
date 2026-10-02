@@ -63,4 +63,4 @@ python3 -m json.tool locales/ru.json > /dev/null && echo OK
 
 1. Внесите правки в `locales/ru.json`.
 2. Поднимите `version` в `orca-plugin.json` и добавьте запись в `CHANGELOG.md`.
-3. Закоммитьте, поставьте тег (`git tag v1.3.1`) и запушьте с тегом во все зеркала.
+3. Закоммитьте, поставьте тег (`git tag v1.3.2`) и запушьте с тегом во все зеркала.
