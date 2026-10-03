@@ -80,7 +80,7 @@ https://github.com/stablyai/orca/issues/9207
 
 ## Что сказать, если спросят про наш пак
 
-- `taranttoola-create.russian`, ~14 777 строк, MIT, никакого кода — только перевод.
-- Полностью синхронизирован с 1.4.218; не покрыто только 180 защищённых `Plugin*` и
+- `taranttoola-create.russian`, ~14 860 строк, MIT, никакого кода — только перевод.
+- Полностью синхронизирован с 1.4.219; не покрыто только 180 защищённых `Plugin*` и
   2 oversize CSS — это структурный предел, а не незавершённая работа.
 - Зеркала: GitHub (`taranttoola-create/orca-russian`) и GitVerse (`buheirf/orca-russian`).
