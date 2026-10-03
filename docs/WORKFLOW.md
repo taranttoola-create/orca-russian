@@ -109,11 +109,29 @@ git push origin add-russian-language-pack
 
 Заголовок PR тоже обновить через `gh pr edit 9 --repo stablyai/orca-plugins --title "..."`.
 
-## Установка в Orca (для пользователя)
+## Шаг 12. Обновить пак в своей Orca (вручную)
+
+Orca **не** обновляет git-плагин сама: `current` в
+`~/Library/Application Support/Orca/plugins/taranttoola-create.russian/` продолжает
+указывать на старую копию, пока пак не переустановят. Поэтому после каждого релиза:
 
 Settings → Plugins → Install plugin → вкладка **Git URL** → вставить
 `https://github.com/taranttoola-create/orca-russian#vX.Y.Z`
-Затем: Settings → Appearance → Language → «Русский язык для Orca».
+Затем: Settings → Appearance → Language → «Русский язык для Orca» (после переименования
+id или установки заново язык приходится выбирать повторно — старый id в `uiLanguage`
+не разрешается).
+
+Инсталлятор Orca кладёт содержимое в `plugins/<pluginKey>/<contentHash>/` и пишет
+provenance в `.install-provenance/<contentHash>.json` (там `resolvedCommit` и `ref`).
+Проверить, какая версия активна, можно так:
+
+```bash
+P="$HOME/Library/Application Support/Orca/plugins/taranttoola-create.russian"
+jq -r .entry.version "$P/.install-provenance/$(cat "$P/current").json"
+```
+
+**Не подменять содержимое в этой папке руками** — имя каталога и provenance связаны,
+чистая переустановка через UI надёжнее.
 
 ## Частые ошибки при пуше
 
