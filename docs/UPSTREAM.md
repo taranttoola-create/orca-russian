@@ -1,0 +1,86 @@
+# UPSTREAM.md — взаимодействие с разработчиками Orca
+
+Всё, что связано с апстримом: какие issue/PR открыты, что отправлено, кто мейнтейнеры,
+и куда писать, чтобы получить ответ. Дополняет `CONTEXT.md`.
+
+## Кто есть кто
+
+| Аккаунт | Роль | Замечания |
+| --- | --- | --- |
+| **nwparker** (Neil) | ключевой мейнтейнер | самый активный по коммитам; создал Discord; отвечал в #9207 |
+| **AmethystLiang** | мейнтейнер | отвечал «looking into it» в #20508, подписан на #17913 |
+| **OrcaWin** | мейнтейнер | ставил метку `bug` в #17913 |
+| **imgusev** | автор другого рус. пака | помогает в #17913 (категория C, плюрали) |
+| **berkaysirtas** | автор PR про инструменты паков | #20508, #20513 |
+| **mark22013333** | автор zh-TW пака | подтвердил проблему коротких путей в #17913 |
+| **smwbev** | автор ещё одного рус. пака | PR #12505 (плюрали) |
+
+## Наши открытые обращения
+
+### Issue #17913 — «UI text outside the i18n catalog...»
+https://github.com/stablyai/orca/issues/17913
+- Главный тред про непереводимые строки. Мы выложили дамп 3 990 литералов + перевод 3 890.
+- Метка `bug` от OrcaWin (19.09). Мейнтейнер молчит, но тред живой — пишут другие авторы.
+- Gists с дампами:
+  - литералы: https://gist.github.com/taranttoola-create/9a5b552df066fc7230baa42fe0427b7b
+  - перевод: https://gist.github.com/taranttoola-create/81d342133b898456b951e670aee1d8fe
+
+### Issue #25048 — «shortcut action titles and group names are not localizable» ← НАШЕ ГЛАВНОЕ
+https://github.com/stablyai/orca/issues/25048
+- Наш issue с **готовым патчем** против `v1.4.218` (`git apply --check` чистый).
+- Суть: `title`/`group` в реестре шорткатов рендерятся без `translate()`. Предлагаем
+  пропускать через `translate()` с fallback на английский, ключ по action-id.
+- Gist со всем: https://gist.github.com/taranttoola-create/8e52e4cd2286cbbe77eeeed87e2ae121
+  (патч, таблица EN→RU для 88 действий, 9 групп, готовый каталог 139 ключей).
+- **Схема ключей:** `keybinding.title.<id>` / `keybinding.group.<name>`, где небуквенные
+  символы заменены на `_` (`tab.newAgent` → `tab_newAgent`). Это важно: в паке v1.3.3
+  уже лежат эти 139 ключей. **Если патч примут с нашей схемой — переводы включатся сами.**
+- Ответа нет (0 комментариев, 0 реакций).
+
+### Issue #20508 — «tooling: scaffold and re-sync helper for plugin language packs»
+https://github.com/stablyai/orca/issues/20508
+- Мы оставили полевой отчёт со всеми граблями (защищённые пути, oversize CSS, дрейф
+  плейсхолдеров, правило `orca-`) и предложением по `init`.
+- AmethystLiang отвечал автору issue (не нам): «looking into it».
+
+### PR #9 — маркетплейс
+https://github.com/stablyai/orca-plugins/pull/9
+- Наша запись `taranttoola-create.russian` (ref актуализируется при каждом релизе).
+- **0 из 11** community-PR в этом репо смержено. Процесс приёма не построен.
+
+### Issue #9207 — заявка на встроенный русский
+https://github.com/stablyai/orca/issues/9207
+- Мейнтейнеры: встроенные локали пока не добавляют, направляют в языковые паки. Здесь
+  собран список community-паков (включая наш).
+
+## Связанные чужие обсуждения (мониторить)
+
+- **PR #12505** (smwbev) — фикс плюралей. Открыт с 04.08, не смержен.
+- **#12106** — issue про плюрали (4 формы). Связан с нашим ограничением.
+- **PR #20513** (berkaysirtas) — скрипт scaffolding для паков. Если примут, появится
+  официальный `status --check` и часть наших ручных проверок станет не нужна.
+
+## Где они реально отвечают: Discord
+
+**https://discord.gg/fzjDKHxv8Q**
+- Сервер «Orca», ~5 400 участников, ~1 200 онлайн, создан `nwparker`.
+- GitHub у них — поток на 7 400+ открытых issue, ответа там почти не дождаться.
+- Discord — живой канал, где сидит сам мейнтейнер. **Если нужен ответ — писать туда.**
+- Формат сообщения: коротко суть + ссылка на issue. Каналы: `#general`, `#show-and-tell`.
+
+Другие каналы (менее полезные): X [@orca_build](https://x.com/orca_build) (только
+анонсы), WeChat группа №11 (кит. сообщество), GitHub Discussions (включены, но пусты).
+
+## Как связаться по нашему патчу (#25048)
+
+Ещё не написано в Discord. Если нужно ускорить — предложить в Discord:
+> Hi! Maintained a community Russian pack (~14.7k strings). Filed #25048 with a ready
+> patch (applies clean on v1.4.218) to make keybinding titles localizable — it's the
+> last big English block on a localized build. Happy to open the PR if the approach fits.
+
+## Что сказать, если спросят про наш пак
+
+- `taranttoola-create.russian`, ~14 777 строк, MIT, никакого кода — только перевод.
+- Полностью синхронизирован с 1.4.218; не покрыто только 180 защищённых `Plugin*` и
+  2 oversize CSS — это структурный предел, а не незавершённая работа.
+- Зеркала: GitHub (`taranttoola-create/orca-russian`) и GitVerse (`buheirf/orca-russian`).
