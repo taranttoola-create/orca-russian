@@ -36,6 +36,28 @@
 - `current` — указатель на активную версию; старая версия сохраняется (можно откатить).
 - Запись в `plugins.lock.json` хранит `ref`, `resolvedCommit`, `contentHash`.
 
+
+## Свой источник маркетплейса (проверено на 1.4.219)
+
+Позволяет раздавать пак, не дожидаясь `stablyai/orca-plugins`: пользователь добавляет репозиторий
+как источник и ставит/обновляет плагин из вкладки **All**.
+
+- Индекс — файл **`orca-marketplace.json` в корне репозитория** (константа
+  `PLUGIN_MARKETPLACE_FILENAME`), лимит 16 МиБ, читается `pluginMarketplaceSchema.parse`.
+- Схема (zod, `strictObject`): `{name, owner, plugins:[{id, source{kind:"git",url,ref},
+  description?, categories[]}]}`; лишние ключи запрещены, `owner` — регексп
+  `^[A-Za-z0-9](?:[A-Za-z0-9._-]*[A-Za-z0-9])?$`, `categories` — слаги, значения из
+  `["themes","icons","icon-themes","terminal-themes","skills"]` **отбрасываются** при показе.
+- `id` — квалифицированный ключ `<publisher>.<id>`; при установке Orca сверяет его с манифестом
+  из репозитория (`expectedPluginKey`), так что он обязан совпадать.
+- Диалог **Settings → Plugins → Manage sources → Add source** («Marketplace sources») имеет два
+  обязательных поля: **Git URL** и **Git ref**; ref предзаполнен `main` и без него кнопка не активна.
+- Порядок работы: `git clone <url> <ref>` во временную папку → чтение `orca-marketplace.json` →
+  снапшот; при установке — повторный клон по `source.ref` из записи.
+- Проверка индекса «как в Orca» (без запуска приложения):
+  `npx @electron/asar` → распаковать `out/shared` и `out/main` → `require` модуля
+  `out/shared/plugins/plugin-marketplace.js` → `pluginMarketplaceSchema.safeParse(json)`.
+
 ## Генерация ключей в каталоге Orca (для понимания, почему строк нет)
 
 Инструмент `config/scripts/localize-renderer-strings.mjs` генерирует ключи так:

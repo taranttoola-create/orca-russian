@@ -57,8 +57,9 @@
 как источник маркетплейса, и пак будет ставиться и обновляться в один клик:
 
 1. **Settings → Plugins → Manage sources → Add source** (окно называется **Marketplace sources**).
-2. Вставьте `https://github.com/taranttoola-create/orca-russian.git`
-   (или зеркало `https://gitverse.ru/buheirf/orca-russian.git`).
+2. В поле **Git URL** вставьте `https://github.com/taranttoola-create/orca-russian.git`
+   (или зеркало `https://gitverse.ru/buheirf/orca-russian.git`). Поле **Git ref** оставьте
+   как есть — `main`, оттуда читается индекс.
 3. На вкладке **All** выберите «Русский язык для Orca» и нажмите **Install**.
 
 Orca сама предложит новую версию, когда в индексе обновится тег, — ссылку в `Install plugin`
